@@ -8,3 +8,4 @@
 | 전체 조회   | GET    | /api/schedules        | Query Param (author, date, page, size) | 일정 목록 배열  | 200 OK     |
 | 일정 수정   | PUT    | /api/schedules/{id}   | JSON body (task, author, password) | 수정된 일정 객체 | 200 OK<br>401 Unauthorized<br>404 Not Found |
 | 일정 삭제   | DELETE | /api/schedules/{id}   | JSON body (password) | 메시지         | 200 OK<br>401 Unauthorized<br>404 Not Found |
+
