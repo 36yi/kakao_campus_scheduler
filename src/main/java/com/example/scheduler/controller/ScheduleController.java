@@ -3,6 +3,7 @@ package com.example.scheduler.controller;
 import com.example.scheduler.dto.ScheduleRequestDTO;
 import com.example.scheduler.dto.ScheduleResponseDTO;
 import com.example.scheduler.service.ScheduleService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ public class ScheduleController {
     }
 
     @PostMapping
-    public ResponseEntity<ScheduleResponseDTO> create(@RequestBody ScheduleRequestDTO dto) {
+    public ResponseEntity<ScheduleResponseDTO> create(@RequestBody @Valid ScheduleRequestDTO dto) {
         return ResponseEntity.ok(service.create(dto));
     }
     @GetMapping
